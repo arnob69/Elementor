@@ -1,0 +1,270 @@
+/* Global Styles */
+* {
+    text-align: center;
+}
+
+.main {
+    gap: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Base styles for elements to prevent animation on load */
+[data-animate] {
+    opacity: 0; /* Hidden by default */
+    transform: scale(5); /* Large initial scale */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition for inactive state */
+}
+
+/* Version 1: Basic Smooth Zoom-Out */
+.a69_zoom_out_v1 {
+    display: inline-block;
+    animation: zoomOutBasic 1.2s ease-in-out forwards; /* Smooth entry and exit */
+}
+
+@keyframes zoomOutBasic {
+    0% {
+        transform: scale(5); /* Dramatic start */
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Version 2: Enhanced Bounce Effect */
+.a69_zoom_out_v2 {
+    display: inline-block;
+    animation: zoomOutBounce 1.5s ease-in-out forwards;
+}
+
+@keyframes zoomOutBounce {
+    0% {
+        transform: scale(5); /* Dramatic start */
+        opacity: 0;
+    }
+    60% {
+        transform: scale(0.95); /* Slight bounce effect */
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Version 3: Awesome Zoom-Out with Bounce and Overshoot */
+.a69_zoom_out_v3 {
+    display: inline-block;
+    animation: zoomOutAwesome 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes zoomOutAwesome {
+    0% {
+        transform: scale(5); /* Dramatic start */
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1); /* Slight overshoot */
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(0.98); /* Subtle rebound */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Version 4: Refined and Polished */
+.a69_zoom_out_v4 {
+    display: inline-block;
+    animation: zoomOutFinal 1.4s ease-in-out forwards;
+}
+
+@keyframes zoomOutFinal {
+    0% {
+        transform: scale(5); /* Dramatic start */
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.05); /* Subtle bounce */
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Version 5: Smooth Elastic Zoom-Out */
+.a69_zoom_out_v5 {
+    display: inline-block;
+    animation: zoomOutElastic 2s ease-out forwards;
+}
+
+@keyframes zoomOutElastic {
+    0% {
+        transform: scale(5); /* Dramatic start */
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1); /* Elastic overshoot */
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(0.97); /* Subtle rebound */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Version 6: Delayed Zoom-Out Fade */
+.a69_zoom_out_v6 {
+    display: inline-block;
+    animation: zoomOutFade 1.8s ease-in forwards;
+}
+
+@keyframes zoomOutFade {
+    0% {
+        transform: scale(5); /* Dramatic start */
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5; /* Fade midway */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Version 7: Soft Pulsing Zoom-Out */
+.a69_zoom_out_v7 {
+    display: inline-block;
+    animation: zoomOutPulse 2s ease-in-out forwards;
+}
+
+@keyframes zoomOutPulse {
+    0% {
+        transform: scale(5); /* Dramatic start */
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2); /* Pulse smaller midway */
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Version 8: Infinity Zoom-Out */
+.a69_zoom_out_v8 {
+    display: inline-block;
+    animation: zoomOutInfinity 2.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes zoomOutInfinity {
+    0% {
+        transform: scale(5); /* Dramatic start */
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2); /* Slow zoom effect */
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(0.8); /* Slight shrinking */
+        opacity: 1;
+    }
+}
+
+/* Version 9: Glassy Glow Zoom-Out */
+.a69_zoom_out_v9 {
+    display: inline-block;
+    filter: blur(5px); /* Initial blur for glassy effect */
+    animation: zoomOutGlow 2.2s ease-out forwards;
+}
+
+@keyframes zoomOutGlow {
+    0% {
+        transform: scale(5); /* Dramatic start */
+        opacity: 0;
+        filter: blur(5px);
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+        filter: blur(2px); /* Reducing blur */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0); /* Clear focus */
+    }
+}
+
+/* Version 10: Ripple Effect Zoom-Out */
+.a69_zoom_out_v10 {
+    display: inline-block;
+    animation: zoomOutRipple 2.5s ease-out forwards;
+}
+
+@keyframes zoomOutRipple {
+    0% {
+        transform: scale(5); /* Dramatic start */
+        opacity: 0;
+        filter: brightness(0.5); /* Start darker for a ripple-like entry */
+    }
+    50% {
+        transform: scale(1.3); /* Ripple effect */
+        opacity: 0.8;
+        filter: brightness(1); /* Normal brightness */
+    }
+    70% {
+        transform: scale(0.95); /* Subtle bounce-in */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        filter: brightness(1); /* Final clear state */
+    }
+}
+
+/* Version 11: Flashy Zoom-Out */
+.a69_zoom_out_v11 {
+    display: inline-block;
+    animation: zoomOutFlashy 2s ease-in-out forwards;
+}
+
+@keyframes zoomOutFlashy {
+    0% {
+        transform: scale(5); /* Dramatic start */
+        opacity: 0;
+    }
+    25% {
+        transform: scale(1.5);
+        opacity: 0.5; /* Partial visibility for a flash effect */
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.2; /* Dimmer flash midway */
+    }
+    75% {
+        transform: scale(1.1);
+        opacity: 0.7; /* Brighten slightly */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1; /* Fully visible */
+    }
+}
